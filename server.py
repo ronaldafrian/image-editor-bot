@@ -16,7 +16,7 @@ def edit_image():
     img = Image.open(BytesIO(response.content)).convert("RGBA")
 
     # Muat overlay mask
-    mask_response = requests.get('https://raw.githubusercontent.com/username/image-editor-bot/main/mask.png')
+    mask_response = requests.get('https://raw.githubusercontent.com/ronaldafrian/image-editor-bot/main/mask.png')
     mask = Image.open(BytesIO(mask_response.content)).convert("RGBA")
     mask = mask.resize(img.size, Image.ANTIALIAS)
 
